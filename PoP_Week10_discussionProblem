@@ -1,0 +1,9 @@
+def number_of_even(L: list[int])-> int:
+  '''counts the number of even elements in L using recursion'''
+  if len(L) == 0:
+    return 0
+  else:
+    if L[0] % 2 == 0:
+      return 1 + number_of_even(L[1:])
+    else:
+      return number_of_even(L[1:])
